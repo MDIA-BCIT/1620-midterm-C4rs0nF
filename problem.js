@@ -13,3 +13,32 @@ CHALLENGE
 - If the password is less than 5 characters, log out "Your password is too short!".
 */
 
+let userPassword = "epicpassword123";
+let userInput = "epicpassword123";
+
+function checkPassword(password) {
+    if (userPassword <= "5") {
+        console.log("Your password is too short!");
+    }
+    if (userPassword === "forgot") {
+        console.log(
+            "This password you set should not be used because it glitches the system"
+        );
+    }
+    if (userPassword === "reset") {
+        console.log(
+            "This password you set should not be used because it glitches the system"
+        );
+    }
+    if (userInput === userPassword) {
+        console.log("Access Granted!");
+    } else if (userInput === "forgot") {
+        console.log("Here is a hint");
+    } else if (userInput === "reset") {
+        console.log("Let's reset your account");
+    } else {
+        console.log("Access Denied!");
+    }
+}
+
+checkPassword(userInput);
